@@ -18,7 +18,11 @@ function validateEmployee(employees) {
 }
 
 app.get('/employees', async (req, res) => {
-  res.status(200).json({ employees: employees,message:"new commit" });
+  res.status(200).json({ employees: employees});
+});
+
+app.get('/newEndPoint', async (req, res) => {
+  res.status(200).json({ employees: employees});
 });
 
 app.get('/employees/details/:id', async (req, res) => {
